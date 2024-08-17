@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-// Importa los componentes
 import { TopSectionComponent } from './top-section/top-section.component';
 import { CenterSectionComponent } from './center-section/center-section.component';
 import { BottomSectionComponent } from './bottom-section/bottom-section.component';
@@ -11,12 +10,12 @@ import { BottomSectionComponent } from './bottom-section/bottom-section.componen
   standalone: true,
   imports: [
     RouterOutlet,
-    TopSectionComponent, // Agrega TopSectionComponent
-    CenterSectionComponent, // Agrega CenterSectionComponent
-    BottomSectionComponent // Agrega BottomSectionComponent
+    TopSectionComponent,
+    CenterSectionComponent,
+    BottomSectionComponent 
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Nota: cambió de 'styleUrl' a 'styleUrls'
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
   title = 'pjbaseball';
