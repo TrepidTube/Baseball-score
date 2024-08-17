@@ -1,0 +1,9 @@
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #101010;
+    border-bottom: 2px solid #444;
+    color: white;
+  }
+  

@@ -1,0 +1,12 @@
+.center-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #222;
+  }
+  
+  .center-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  

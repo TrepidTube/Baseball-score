@@ -1,0 +1,25 @@
+<div class="bottom-section">
+    <table class="score-table">
+      <tr>
+        <th>Equipo</th>
+        <th *ngFor="let inning of innings">{{ inning }}</th>
+        <th>C</th>
+        <th>H</th>
+        <th>E</th>
+        <th>Balls</th>
+        <th>Strikes</th>
+        <th>Outs</th>
+      </tr>
+      <tr *ngFor="let team of teams">
+        <td>{{ team.name }}</td>
+        <td *ngFor="let score of team.scores">{{ score }}</td>
+        <td>{{ team.c }}</td>
+        <td>{{ team.h }}</td>
+        <td>{{ team.e }}</td>
+        <td>{{ team.balls }}</td>
+        <td>{{ team.strikes }}</td>
+        <td>{{ team.outs }}</td>
+      </tr>
+    </table>
+  </div>
+  
