@@ -1,9 +1,31 @@
-.top-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #101010;
-    border-bottom: 2px solid #444;
-    color: white;
-  }
-  
+
+
+.top-section-container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  background-color: #101010; 
+  color: white;
+  padding: 30px;
+}
+
+.stat-group {
+  display: flex;
+  align-items: baseline; 
+}
+
+.stat-title {
+  font-size: 20px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}

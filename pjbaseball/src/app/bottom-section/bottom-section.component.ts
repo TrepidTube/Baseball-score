@@ -32,4 +32,9 @@ export class BottomSectionComponent {
       outs: 2
     }
   ];
+  receivedData: string = '';
+
+  onDataReceived(data: string) {
+    // Aquí puedes manejar los datos recibidos como desees
+  }
 }

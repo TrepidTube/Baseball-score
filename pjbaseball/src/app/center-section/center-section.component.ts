@@ -10,4 +10,10 @@ import { CommonModule } from '@angular/common';
 export class CenterSectionComponent {
   @Input() playerImage: string = 'assets/image.png'; // Ruta de la imagen
   @Input() playerName: string = 'Chris Carter';
+
+  receivedData: string = '';
+
+  onDataReceived(data: string) {
+    // Aquí puedes manejar los datos recibidos como desees
+  }
 }

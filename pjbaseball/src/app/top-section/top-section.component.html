@@ -1,8 +1,27 @@
 <div class="top-section">
-    <div><strong>{{ pitcherName }}</strong></div>
-    <div><strong>Velocidad de Pitcheo</strong><br>{{ pitchSpeed }} MPH</div>
-    <div><strong>Total de Lanzamientos</strong><br>{{ totalPitches }}</div>
-    <div><strong>Strikes</strong><br>{{ strikes }}</div>
-    <div><strong>Bolas</strong><br>{{ balls }}</div>
+  <div class="top-section-container">
+    <div class="stat-group">
+      <div class="stat-value"><strong>{{ pitcherName }}</strong></div>
+    </div>
+
+    <div class="stat-group">
+      <div class="stat-title"><strong>Velocidad de Pitcheo</strong><br></div>
+      <div class="stat-value">{{ pitchSpeed }} MPH</div>
+    </div>
+
+    <div class="stat-group">
+      <div class="stat-title"><strong>Total de Lanzamientos</strong><br></div>
+      <div class="stat-value">{{ totalPitches }}</div>
+    </div>
+
+    <div class="stat-group">
+      <div class="stat-title"><strong>Strikes</strong><br></div>
+      <div class="stat-value">{{ strikes }}</div>
+    </div>
+
+    <div class="stat-group">
+      <div class="stat-title"><strong>Bolas</strong><br></div>
+      <div class="stat-value">{{ balls }}</div>
+    </div>
   </div>
-  
+</div>
