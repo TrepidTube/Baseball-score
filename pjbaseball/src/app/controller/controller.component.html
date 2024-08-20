@@ -1,20 +1,75 @@
 <body>
     <div class="controller-container">
-        <!-- Sección de Player Controller -->
-        <div class="player-controller">
-            <input type="text" placeholder="Nombre del jugador">
-            <input type="text" placeholder="Número del jugador">
-            <input type="text" placeholder="Velocidad de pitcheo">
-            <input type="text" placeholder="Total de lanzamientos">
-            <input type="text" placeholder="Strikes">
-            <input type="text" placeholder="Bolas">
-            <button>Cargar Imagen</button>
+        <!-- Inputs de control -->
+        <div class="form-group">
+            <label for="name">Nombre del jugador</label>
+            <input type="text" id="name" placeholder="Nombre del jugador">
+        </div>
+        <div class="form-group">
+            <label for="number">Numero del jugador</label>
+            <input type="text" id="number" placeholder="Número">
+        </div>
+        <div class="form-group">
+            <label for="pitch-speed">Velocidad de Pitcheo</label>
+            <input type="text" id="pitch-speed" placeholder="Velocidad de lanzamiento">
+        </div>
+        <div class="form-group">
+            <label for="total-throws">Total Lanzamientos</label>
+            <input type="text" id="total-throws" placeholder="Total Lanzamientos">
+        </div>
+        <div class="form-group">
+            <label for="strikes">Strikes</label>
+            <input type="text" id="strikes" placeholder="Strikes">
+        </div>
+        <div class="form-group">
+            <label for="balls">Bolas</label>
+            <input type="text" id="balls" placeholder="Bolas">
         </div>
 
-        <!-- Sección de Scoreboard -->
+        <!-- Botones de acción -->
+        <div class="button-group">
+            <button>Actualizar Imagen</button>
+            <button>Actualizar</button>
+        </div>
+
+        <!-- Inputs de H, E, Balls, Strikes -->
+        <div class="form-group">
+            <label for="h">H</label>
+            <input type="text" id="h" placeholder="H">
+        </div>
+        <div class="form-group">
+            <label for="e">E</label>
+            <input type="text" id="e" placeholder="E">
+        </div>
+        <div class="form-group">
+            <label for="balls">Balls</label>
+            <input type="text" id="balls" placeholder="Balls">
+        </div>
+        <div class="form-group">
+            <label for="strikes">Strikes</label>
+            <input type="text" id="strikes" placeholder="Strikes">
+        </div>
+
+        <div class="button-group" style="flex-direction: row-reverse;">
+        <button>Actualizar</button>
+        </div>
+
+        <!-- Marcador -->
         <div class="scoreboard">
-            <button>Actualizar Marcador</button>
-            <button>Reiniciar Marcador</button>
+            <div class="form-group">
+                <div class="large-number">Carrera 1</div>
+                <div class="small-inputs">
+                    <input type="text" placeholder="Equipo 1">
+                    <input type="text" placeholder="Equipo 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de acción adicionales -->
+        <div class="action-buttons">
+            <button>Siguiente</button>
+            <button>Saltar</button>
+            <button>Nuevo Partido</button>
         </div>
     </div>
 </body>
