@@ -6,12 +6,12 @@
             <input type="text" id="name" [(ngModel)]="pName" placeholder="Nombre del jugador">
         </div>
         <div class="form-group">
-            <label for="number">Numero del jugador</label>
+            <label for="number">Número del jugador</label>
             <input type="text" id="number" [(ngModel)]="pNumber" placeholder="Número">
         </div>
         <div class="form-group">
             <label for="pitch-speed">Velocidad de Pitcheo</label>
-            <input type="text" id="pitch-speed"[(ngModel)]="pVel" placeholder="Velocidad de lanzamiento">
+            <input type="text" id="pitch-speed" [(ngModel)]="pVel" placeholder="Velocidad de lanzamiento">
         </div>
         <div class="form-group">
             <label for="total-throws">Total Lanzamientos</label>
@@ -26,30 +26,70 @@
             <input type="text" id="balls" [(ngModel)]="balls" placeholder="Bolas">
         </div>
 
+        <!-- Selector de archivos -->
+        <div class="form-group">
+            <label for="file-upload">Selecciona un archivo</label>
+            <input type="file" id="fileInput">
+        </div>
+
         <!-- Botones de acción -->
         <div class="button-group">
-            <button >Actualizar Imagen</button>
+            <button>Actualizar Imagen</button>
             <button (click)="sendText()">Actualizar</button>
         </div>
 
-        <!-- Inputs de H, E, Balls, Strikes -->
-        <div class="form-group">
-            <label for="balls">Balls</label>
-            <input type="text" id="balls" [(ngModel)]="gameBall" placeholder="Balls">
-        </div>
-        <div class="form-group">
-            <label for="strikes">Strikes</label>
-            <input type="text" id="strikes" [(ngModel)]="gameStrike" placeholder="Strikes">
+        <!-- Inputs de H, E, Strikes, Balls -->
+        <div class="team-stats">
+            <div class="team-row">
+                <div class="form-group">
+                    <h2>Equipo 1</h2>
+                    <input type="text" [(ngModel)]="team1" placeholder="Equipo 1">
+                </div>
+                <div class="team-inputs">
+                    <label>H:</label>
+                    <label>E:</label>
+                    <label>Strikes:</label>
+                    <label>Balls:</label>
+                </div>
+                <div class="team-inputs">
+                    <input type="text" [(ngModel)]="team1H" placeholder="H">
+                    <input type="text" [(ngModel)]="team1E" placeholder="E">
+                    <input type="text" [(ngModel)]="team1Strikes" placeholder="Strikes">
+                    <input type="text" [(ngModel)]="team1Balls" placeholder="Bolas">
+                </div>
+            </div>
+            <div class="team-row">
+                <div class="form-group">
+                    <h2>Equipo 1</h2>
+                    <input type="text" [(ngModel)]="team2" placeholder="Equipo 2">
+                </div>
+                <div class="team-inputs">
+                    <label>H:</label>
+                    <label>E:</label>
+                    <label>Strikes:</label>
+                    <label>Balls:</label>
+                </div>
+                <div class="team-inputs">
+                    <input type="text" [(ngModel)]="team2H" placeholder="H">
+                    <input type="text" [(ngModel)]="team2E" placeholder="E">
+                    <input type="text" [(ngModel)]="team2Strikes" placeholder="Strikes">
+                    <input type="text" [(ngModel)]="team2Balls" placeholder="Bolas">
+                </div>
+            </div>
         </div>
 
+        <!-- Botón de actualizar -->
         <div class="button-group" style="flex-direction: row-reverse;">
-        <button (click)="sendData()">Actualizar</button>
+            <button (click)="sendData()">Actualizar</button>
         </div>
 
         <!-- Marcador -->
         <div class="scoreboard">
             <div class="form-group">
-                <div> <p class="large-number">Carrera</p><p class="large-number">1</p></div>
+                <div>
+                    <p class="large-number">Carrera</p>
+                    <p class="large-number">1</p>
+                </div>
                 <div class="small-inputs">
                     <input type="text" placeholder="Carrera" [(ngModel)]="gameRuns">
                 </div>
@@ -58,8 +98,8 @@
 
         <!-- Botones de acción adicionales -->
         <div class="action-buttons">
-            <button (click)="next()">Siguiente</button>
-            <button (click)="back()">Anterior</button>
+            <button #Next (click)="next()">Siguiente</button>
+            <button #Back (click)="back()">Anterior</button>
             <button>Nuevo Partido</button>
         </div>
     </div>

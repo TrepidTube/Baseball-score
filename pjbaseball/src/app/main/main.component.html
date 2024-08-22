@@ -1,18 +1,23 @@
 <div class="main-container">
     <app-top-section class="top-section" [pitcherName]="playerData.name"  [pitcherNumber]="playerData.number" [pitchSpeed]="playerData.speed" [totalPitches]="playerData.throws" [strikes]="playerData.strike" [balls]="playerData.ball"></app-top-section>
-    <app-center-section class="center-section" [playerImage]="'assets/image.png'" [playerName]="'Chris Carter'"></app-center-section>
+    <app-center-section class="center-section" [playerImage]="''"></app-center-section>
     <app-bottom-section class="bottom-section" 
-
-    [c11]   [c12]
-    [c21]   [c22]
-    [c31]   [c32]
-    [c41]   [c42]
-    [c51]   [c52]
-    [c61]   [c62]
-    [c71]   [c72]
-    [c81]   [c82]
-    [c91]   [c92]
-    [c101]  [c102]
-    [c1]    [c2]
+    [name1]="gameData.tym1" [name2]="gameData.tym2"
+    [c11]="points[0]"   [c12]="points[1]"
+    [c21]="points[2]"   [c22]="points[3]"
+    [c31]="points[4]"   [c32]="points[5]"
+    [c41]="points[6]"   [c42]="points[7]"
+    [c51]="points[8]"   [c52]="points[9]"
+    [c61]="points[10]"   [c62]="points[11]"
+    [c71]="points[12]"   [c72]="points[13]"
+    [c81]="points[14]"   [c82]="points[15]"
+    [c91]="points[16]"   [c92]="points[17]"
+    [c101]="points[18]"  [c102]="points[19]"
+    [ca1]="gameScore.Tm1"    [ca2]="gameScore.Tm2"
+    [e1]="gameData.te1"    [e2]="gameData.te2"
+    [h1]="gameData.th1"    [h2]="gameData.th2"
+    [balls1]="gameData.tb1"    [balls2]="gameData.tb2"
+    [strikes1]="gameData.ts1"  [strikes2]="gameData.ts2"
+    [outs1]="gameData.to1"     [outs2]="gameData.to2"
  ></app-bottom-section>
 </div>
