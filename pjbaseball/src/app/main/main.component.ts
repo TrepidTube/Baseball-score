@@ -18,6 +18,7 @@ export class MainComponent implements OnInit {
   playerData: any = {};
   gameData: any = {};
   gameScore: any = {};
+  imgInfo: any = {};
   countList: number = 1;
 
   ngOnInit() {
@@ -34,8 +35,11 @@ export class MainComponent implements OnInit {
         } else if (type === 'gameScore') {
           this.gameScore = payload;
           console.log('Game score received:', this.gameScore);
-      }
-        
+        } else if (type === 'imgInfo') {
+          this.imgInfo = payload;
+          console.log('Game image received:', this.imgInfo);
+        }
+
         this.MainCounter(this.gameScore.count, this.gameScore.gRuns, this.gameScore.Tm1, this.gameScore.Tm2);
         }
       });

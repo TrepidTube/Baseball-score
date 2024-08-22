@@ -42,23 +42,29 @@ export class ControllerComponent {
 
   imageUrl: string = ''; // Aquí almacenarás la URL como string
 
-  ImgUp(){
+  ImgUp() {
     const inputElement = document.getElementById('fileInput') as HTMLInputElement;
-
-    if (inputElement.files && inputElement.files[0]) {
+  
+   if (inputElement.files && inputElement.files[0]) {
       const file = inputElement.files[0];
       const fileUrl = URL.createObjectURL(file);
       this.imageUrl = fileUrl; // Guardamos la URL como string
       console.log('URL del archivo seleccionado:', this.imageUrl);
-    }
-
-    if (window.opener) {
-      const img = {
-      
-      };
-      window.opener.postMessage({ type: 'imgInfo', payload: img }, '*');
+  
+      // Si quieres enviar la imagen al opener
+      if (window.opener) {
+        const img = {
+          name: file.name,
+          size: file.size,
+          type: file.type,
+          url: this.imageUrl // URL para previsualización
+        };
+        window.opener.postMessage({ type: 'imgInfo', payload: img }, '*');
+      } else {
+        console.error('No opener window found');
+      }
     } else {
-      console.error('No opener window found');
+      console.error('No file selected or file input is invalid.');
     }
   }
 

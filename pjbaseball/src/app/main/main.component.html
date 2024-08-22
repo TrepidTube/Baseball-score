@@ -1,6 +1,6 @@
 <div class="main-container">
     <app-top-section class="top-section" [pitcherName]="playerData.name"  [pitcherNumber]="playerData.number" [pitchSpeed]="playerData.speed" [totalPitches]="playerData.throws" [strikes]="playerData.strike" [balls]="playerData.ball"></app-top-section>
-    <app-center-section class="center-section" [playerImage]="''"></app-center-section>
+    <app-center-section class="center-section" [playerImage]="imgInfo.url"></app-center-section>
     <app-bottom-section class="bottom-section" 
     [name1]="gameData.tym1" [name2]="gameData.tym2"
     [c11]="points[0]"   [c12]="points[1]"
