@@ -70,9 +70,7 @@
             text-align: center;
             font-size: 23px; /* Aumenta el tamaño del texto */
         }
-        .large-number {
-            padding-left: 13px;
-        }
+  
         .scoreboard .large-number {
             font-size: 48px; /* Mantén el tamaño del número grande */
             color: red;

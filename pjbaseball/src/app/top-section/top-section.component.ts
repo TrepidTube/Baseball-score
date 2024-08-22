@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TopSectionComponent {
   @Input() pitcherName: string = 'Wilmer Rios';
+  @Input() pitcherNumber: number = 0;
   @Input() pitchSpeed: number = 0;
   @Input() totalPitches: number = 0;
   @Input() strikes: number = 0;

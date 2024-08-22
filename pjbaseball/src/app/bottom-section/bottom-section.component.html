@@ -2,7 +2,16 @@
     <table class="score-table">
       <tr>
         <th>Equipo</th>
-        <th *ngFor="let inning of innings">{{ inning }}</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
         <th>C</th>
         <th>H</th>
         <th>E</th>
@@ -10,15 +19,43 @@
         <th>Strikes</th>
         <th>Outs</th>
       </tr>
-      <tr *ngFor="let team of teams">
-        <td>{{ team.name }}</td>
-        <td *ngFor="let score of team.scores">{{ score }}</td>
-        <td>{{ team.c }}</td>
-        <td>{{ team.h }}</td>
-        <td>{{ team.e }}</td>
-        <td>{{ team.balls }}</td>
-        <td>{{ team.strikes }}</td>
-        <td>{{ team.outs }}</td>
+      <tr>
+        <td>{{ name1 }}</td>
+        <td #c11>{{ c11 }}</td>
+        <td #c21>{{ c21 }}</td>
+        <td #c31>{{ c31 }}</td>
+        <td #c41>{{ c41 }}</td>
+        <td #c51>{{ c51 }}</td>
+        <td #c61>{{ c61 }}</td>
+        <td #c71>{{ c71 }}</td>
+        <td #c81>{{ c81 }}</td>
+        <td #c91>{{ c91 }}</td>
+        <td #c101>{{ c101 }}</td>
+        <td>{{ c1 }}</td>
+        <td>{{ h1 }}</td>
+        <td>{{ e1 }}</td>
+        <td>{{ balls1 }}</td>
+        <td>{{ strikes1 }}</td>
+        <td>{{ outs1 }}</td>
+      </tr>
+      <tr>
+        <td>{{ name2 }}</td>
+        <td #c12>{{ c12 }}</td>
+        <td #22>{{ c22 }}</td>
+        <td #c32>{{ c32 }}</td>
+        <td #c42>{{ c42 }}</td>
+        <td #c52>{{ c52 }}</td>
+        <td #c62>{{ c62 }}</td>
+        <td #c72>{{ c72 }}</td>
+        <td #c82>{{ c82 }}</td>
+        <td #c92>{{ c92 }}</td>
+        <td #c102>{{ c102 }}</td>
+        <td>{{ c2 }}</td>
+        <td>{{ h2 }}</td>
+        <td>{{ e2 }}</td>
+        <td>{{ balls2 }}</td>
+        <td>{{ strikes2 }}</td>
+        <td>{{ outs2 }}</td>
       </tr>
     </table>
   </div>

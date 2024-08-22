@@ -1,5 +1,18 @@
 <div class="main-container">
-    <app-top-section class="top-section" [pitcherName]="'Wilmer Rios'" [pitchSpeed]="95" [totalPitches]="12" [strikes]="8" [balls]="4"></app-top-section>
+    <app-top-section class="top-section" [pitcherName]="playerData.name"  [pitcherNumber]="playerData.number" [pitchSpeed]="playerData.speed" [totalPitches]="playerData.throws" [strikes]="playerData.strike" [balls]="playerData.ball"></app-top-section>
     <app-center-section class="center-section" [playerImage]="'assets/image.png'" [playerName]="'Chris Carter'"></app-center-section>
-    <app-bottom-section class="bottom-section"></app-bottom-section>
+    <app-bottom-section class="bottom-section" 
+
+    [c11]   [c12]
+    [c21]   [c22]
+    [c31]   [c32]
+    [c41]   [c42]
+    [c51]   [c52]
+    [c61]   [c62]
+    [c71]   [c72]
+    [c81]   [c82]
+    [c91]   [c92]
+    [c101]  [c102]
+    [c1]    [c2]
+ ></app-bottom-section>
 </div>
