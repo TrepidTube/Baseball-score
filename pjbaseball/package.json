@@ -1,13 +1,20 @@
 {
   "name": "pjbaseball",
-  "version": "0.0.0",
+  "main": "main.js",
+  "version": "0.0.1",
+  "authors": "sc",
+  "description": "scapp",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "fix-paths": "node fix-paths.js",
+    "postbuild": "npm run fix-paths",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:pjbaseball": "node dist/pjbaseball/server/server.mjs"
+    "serve:ssr:pjbaseball": "node dist/pjbaseball/server/server.mjs",
+    "electron": "ng build --base-href ./ && npm run fix-paths && electron .",
+    "dist": "ng build --base-href ./ && electron-builder"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +40,9 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "@types/plist": "^3.0.5",
+    "electron": "^32.0.1",
+    "electron-builder": "^24.13.3",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -40,5 +50,16 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2"
+  },
+  "build": {
+    "appId": "software.can",
+    "productName": "softwareCan",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "files": [
+      "**/*",
+      "dist/pjbaseball/browser/**"
+    ]
   }
 }
