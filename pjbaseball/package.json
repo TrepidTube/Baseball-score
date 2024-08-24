@@ -8,10 +8,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "fix-paths": "node fix-paths.js",
+    "postbuild": "npm run fix-paths",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:pjbaseball": "node dist/pjbaseball/server/server.mjs",
-    "electron": "ng build --base-href ./ && electron .",
+    "electron": "ng build --base-href ./ && npm run fix-paths && electron .",
     "dist": "ng build --base-href ./ && electron-builder"
   },
   "private": true,
