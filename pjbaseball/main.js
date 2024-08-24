@@ -1,15 +1,20 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, globalShortcut } = require('electron');
 const url = require('url');
 const path = require('path');
-let mainWindow
-function createWindow () {
+
+let mainWindow;
+let controllerWindow;
+
+function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1920,
+    height: 1080,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
-  })
+  });
+
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, `/dist/pjbaseball/browser/index.html`),
@@ -17,15 +22,52 @@ function createWindow () {
       slashes: true
     })
   );
-  // mainWindow.webContents.openDevTools()
+
   mainWindow.on('closed', function () {
-    mainWindow = null
-  })
+    mainWindow = null;
+  });
 }
-app.on('ready', createWindow)
+
+function createControllerWindow() {
+  controllerWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
+  });
+
+  controllerWindow.loadURL(
+    url.format({
+      pathname: path.join(__dirname, `/dist/pjbaseball/browser/controller/index.html`),
+      protocol: "file:",
+      slashes: true
+    })
+  );
+
+  controllerWindow.on('closed', function () {
+    controllerWindow = null;
+  });
+}
+
+app.on('ready', () => {
+  createMainWindow();
+
+  // Registrar atajo de teclado Ctrl + Space
+  globalShortcut.register('Ctrl+Space', () => {
+    if (!controllerWindow) {
+      createControllerWindow();
+    } else {
+      controllerWindow.focus();
+    }
+  });
+});
+
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
-})
+  if (process.platform !== 'darwin') app.quit();
+});
+
 app.on('activate', function () {
-  if (mainWindow === null) createWindow()
-})
+  if (mainWindow === null) createMainWindow();
+});
